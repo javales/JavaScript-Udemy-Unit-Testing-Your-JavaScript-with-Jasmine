@@ -1,10 +1,50 @@
 # 1. Course overview
 
 # 2. Why unit testing? why jasmine?
+- Unit Testing - testing smallest testable code (i.e. function)
+- Ensure changes don't break things
+- Testable code is quality code
+- Jasmine comes with everything out of the box to test your code
 
 # 3. Important javascript notes!
+- [const] and [let] will be used as variable declarations
+- Ecmascript specification, es2015, es6
+- [let] is scope to local block
+- [const] are variables that cannot be reassigned
+- [functions]
+- [arrow functions] research about them
+- [async] and [await] part of es2017 specification
+- 
 
 # 4. Download exercise files
+- [jasmine-casts-1.0.zip] extracted to /Users/twostudy/Proj/Udemy/JavaScript-Udemy-Unit-Testing-Your-JavaScript-with-Jasmine/jasmine-casts-1.0
+Download exercise files
+Please download the source code materials used through the course.
+
+We created a simple link that will give you everything we use in this course:
+
+CLICK HERE TO DOWNLOAD SECTION MATERIALS / SOURCE FILES
+https://github.com/juanlizarazo/jasmine-casts/archive/1.0.zip
+
+The materials are in a zip file, extract to your desired location. You will see the following file structure:
+
+The start folder contains the source code in a complete state right before we start the section.
+
+This is the folder you want to work on if you are coding along with me!
+
+The section 2 is the only one that does not have a start folder as we start there from scratch.
+
+
+The end folder contains the source code in a complete state right after we finish the section.
+
+This is the folder you want to execute if you are watching the videos and just want to execute the complete code at the end of this section.
+
+Additionally you can visit the github repository at:
+
+https://github.com/juanlizarazo/jasmine-casts
+
+https://github.com/reypena/jasmine-casts
+
 
 # 5. Creating your first test
 
