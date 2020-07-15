@@ -47,6 +47,57 @@ https://github.com/reypena/jasmine-casts
 
 
 # 5. Creating your first test
+- Create "My first spec" index.html
+- Download https://github.com/jasmine/jasmine/releases/tag/v3.5.0
+- Extract and copy from lib subfolder the boot.js, jasmine-html.js, jasmine.css, and jasmine.js
+- Put them in a lib folder next to index.html
+- Add <script> src file references to jasmine, jasmine-html, and boot files
+- Open index.html in browser, again
+
+[[RESULT START]]
+3.5.0
+Options
+stop execution on spec failure
+stop spec on expectation failure
+run tests in random order
+hide disabled tests
+
+finished in 0.032sIncomplete: No specs found, , randomized with seed 78561
+[[RESULT END]]
+
+- Enable jasmine.css stylesheet, and notice how it looks a lot better than above, now
+
+## Create first spec using the page's title
+- use script tag to create bucket for function and see RESULT
+
+[[RESULT START]]
+1 spec, 0 failures, randomized with seed 22225
+
+    SPEC HAS NO EXPECTATIONS should have the correct title
+[[RESULT END]]
+
+- spec is now found, but it has no EXPECTATIONS
+
+## Add spec function and matcher
+[                expect().toBe('My first spec');
+]
+
+[[RESULT>]]
+1 spec, 1 failure, randomized with seed 47297Spec List | Failures
+should have the correct title
+Expected undefined to be 'My first spec'.
+<Jasmine>
+@file:///Users/twostudy/Proj/Udemy/JavaScript-Udemy-Unit-Testing-Your-JavaScript-with-Jasmine/Section1.5-CreatingYourFirstTest-FirstSpec/index.html:15:26
+<Jasmine>
+[[<RESULT]]
+
+## Need to grab the title of the page to pass to expect()
+- Look up Document at https://developer.mozilla.org/en-US/docs/Web/API/Document
+- Find Document.title https://developer.mozilla.org/en-US/docs/Web/API/Document/title
+- type document.title in console to test
+[                expect(document.title).toBe('My first spec');
+]
+
 
 # 6. Section summary
 
