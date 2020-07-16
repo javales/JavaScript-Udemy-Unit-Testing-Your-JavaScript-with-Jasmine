@@ -1,6 +1,13 @@
 # 8. Section intro
+- create a simply calculator project
+- test basic functions using Jasmine
+- use suites, specs, expectations, disable suites, pending specs
 
 # 9. Course project
+- three components:
+1. title
+2. formula field
+3. answer
 
 # 10. Let's build it!
 
