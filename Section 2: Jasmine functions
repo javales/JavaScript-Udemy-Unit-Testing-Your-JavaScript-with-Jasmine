@@ -10,8 +10,84 @@
 3. answer
 
 # 10. Let's build it!
+- create [calc.js]
+- "JavaScript class function constructor"
+- think of function constructor as class definition
+## add methods of the four operators +-*/ to it
+- "signatures of our functions"
+- define a [total] property for when we create instances of calculator, and initialize it as zero
+
+[
+function Calculator () {
+    this.total = 0;
+}
+
+Calculator.prototype.add = function(number) {
+    return this.total = number += this.total;
+
+}
+]
+
+[[RESULT]]
+let calculator = new Calculator();
+undefined
+calculator.add(5);
+5
+calculator.subtract(2);
+3
+calculator.multiply(2);
+6
+calculator.divide(2);
+3
+
+
+## disallow 0 as a number for division so Infinity cannot be the result
+Calculator.prototype.divide = function(number) {
+    if (number === 0) {
+        throw new Error('Cannot divide by zero');
+    }
+    
+    return this.total = this.total /= number;
+
+}
+
+[[RESULT]]
+let calculator = new Calculator();
+undefined
+calculator.add(5);
+5
+calculator.divide(0);
+calc.js:22 Uncaught Error: Cannot divide by zero
+    at Calculator.divide (calc.js:22)
+    at <anonymous>:1:12
+
 
 # 11. Programming the UI
+- add [input] and [div] to [simple-calc.html] for expression to calculate and result respectively
+- create [main.js]
+- use [onchange] event to trigger main.js
+- box of the expression we want to calculate 
+- pass it the value the inputValue has
+- the result that will be changing
+
+## calculator will only be dealing with two numbers, so need a way to extract them from input
+const numberA and numberB
+- will be using a regex
+- "regular expression javascript" --> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+- go to https://regex101.com/ to construct the expression that matches the operator in entries like 1+2 and 1*2
+- built this from above: \+|\-|\*|\/
+- use it to create the following wrapped in slashes [const expression = /\+|\-|\*|\//;]
+- look up string prototype in documentation, use [string.prototype.split()]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+- [const numbers = inputValue.split(expression)] because we are capturing the operator in the pattern match of [expression]
+- add [debugger;] flag to pause code at that line
+- now we've confirmed the numbers are being captured in the array, so we can assign the numberA and numberB values
+- however, these are strings, so use [parseInt] method to convert them
+- to create the operation line, use [string.prototype.match();] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match
+[const operation = inputValue.match(expression);]
+- use [debugger;] again to check values
+- confirmed [operation] value is array position 1, so now can build calculator
+- update simple-calc.html to update Result X value from calculated value
+
 
 # 12. Improving errors
 
