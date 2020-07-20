@@ -90,8 +90,78 @@ const numberA and numberB
 
 
 # 12. Improving errors
+- use Number.isNaN(numberA) boolean results as smart way of validating input
+
 
 # 13. Styling the UI (optional lecture)
+- create [style.css]
+- add .body, .title, and .input classes
+- add <link> tag and their relationship, which is stylesheet in [simple-calc.html]
+- add body, input, and title class tags
+- test, confirm good, then add some rules to stylesheet
+
+## find robotto font for body
+- https://fonts.google.com/specimen/Roboto?selection.family=Roboto&sidebar.open
+- copy the link tag <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+- paste under custom stylesheet in [simple-calc.html]
+- then apply font family rule to desired target in [style.css]
+
+## change background color 2:51
+- search for "material color palette"
+- go to https://www.materialui.co/colors site, pick a color: #455A64
+- add to .body class as background
+
+## center, cap, and enlarge title
+
+## change title color by using below site to find colors that go with it
+- search for "paletton" --> http://paletton.com/
+- use 818F95 for title's color rule
+
+## style the input
+- set input width to 100%, change font size, center it
+- add padding to separate text from border
+
+## style the result
+- add padding and color to input class
+- use same color as background
+
+## change input field background color
+- use the title color
+
+## make border 1px and solid
+- and white #FFF
+
+## give input field a default value using a placeholder
+- create impression the default result of 3 was calculated
+- add placeholder and value
+- delete the default value and it shows "Enter operation" placeholder
+
+## give Result a real life feel as well
+- wrap it in a div to give it its own line
+- and can style it separately now
+- add title class to it
+- add new [result=container] class for styling whole container
+- close preceding input tag
+
+## add the title property since there is no label attached to/above input
+
+## add result-container class to style
+- borrow the same properties of existing input class
+- check it out by saving after just adding the result-container class name to the input class name list
+
+## next overwrite properties specific to container
+- fix title using [.result-container .title] class
+- make it black #000
+- since too big, over-ride the 48 from the input result container class
+- center it
+
+## now separate the containers with 50px
+- add [margin] to result-container
+- also want to center it with [auto 0]
+
+## change width so result field is smaller than operation field
+- use [width: 50%] to work with auto 0 shorthand
+- the [auto 0] is an auto 0 left margin shorthand that allows the width percentage to work
 
 # 14. Setting up jasmine
 
