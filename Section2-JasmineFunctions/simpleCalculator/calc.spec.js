@@ -1,5 +1,5 @@
 describe('calc.js', function() {
-    xit('should add numbers to total', function() {
+    it('should add numbers to total', function() {
         const calculator = new Calculator();
         calculator.add(5);
         expect(calculator.total).toBe(5);
@@ -29,5 +29,11 @@ describe('calc.js', function() {
         calculator.divide(2);
     
         expect(calculator.total).toBe(100);
+    });
+
+    it('should initialize the total', function() {
+        const calculator = new Calculator();
+
+        expect(calculator.total).toBe(0);
     });
 });

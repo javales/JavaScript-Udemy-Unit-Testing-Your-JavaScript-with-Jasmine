@@ -342,8 +342,9 @@ should add numbers to total PENDING WITH MESSAGE: Temporarily disabled with xit
 - put [x] in front of describe
 - ACTUALLY specs are NOT marked as Pending (just grayed out)
 - Pending status will display for Spec only when temporarily disabled with [xit]
--  
+
 
 # 19. Section summary
+
 
 # 20. Section notes
