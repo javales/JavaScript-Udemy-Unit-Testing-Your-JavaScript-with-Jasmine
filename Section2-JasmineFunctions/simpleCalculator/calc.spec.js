@@ -1,5 +1,5 @@
 describe('calc.js', function() {
-    it('should add numbers to total', function() {
+    xit('should add numbers to total', function() {
         const calculator = new Calculator();
         calculator.add(5);
         expect(calculator.total).toBe(5);
