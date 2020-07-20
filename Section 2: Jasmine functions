@@ -213,7 +213,7 @@ Incomplete: No specs found, , randomized with seed 39827
 *.spec.js
 *.test.js
 - think of spec and test as synonymous
-- "spec is short for expectation"
+- "spec is short for specification"
 - for Jasmine, we'll be using [*.spec.js]
 - if we were testing TypeScript, a superscript of JavaScript, the test files would be [*.spec.ts]
 - spec file name is based on target file name (e.g. [calc.spec.js]); this keeps the files together in the file tree
@@ -247,6 +247,34 @@ This is shown in the reporters!
 
 
 # 16. Specs
+- suite of specs listing expectations
+- [it] should be considered first word describing spec
+[
+    describe('calc.js', function() {
+    it('should add numbers to total', function() {
+        // TODO: Expectations
+
+    });
+
+    it('should subract numbers to total', function() {
+        // TODO: Expectations
+
+    });
+    ...
+    .
+    .
+    .
+]
+
+[[RESULT]]
+
+finished in 0.022s
+4 specs, 0 failures, randomized with seed 51526
+calc.js
+SPEC HAS NO EXPECTATIONS should add numbers to total
+SPEC HAS NO EXPECTATIONS should divide numbers to total
+SPEC HAS NO EXPECTATIONS should subract numbers to total
+SPEC HAS NO EXPECTATIONS should multiply numbers to total
 
 # 17. Expectations
 
