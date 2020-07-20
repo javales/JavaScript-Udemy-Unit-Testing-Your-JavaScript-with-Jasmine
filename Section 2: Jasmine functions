@@ -205,6 +205,46 @@ Incomplete: No specs found, , randomized with seed 39827
 
 
 # 15. Suites
+- creating our first Jasmine [suite]
+- [calculator.js] contains the core functionality of the project and will be the first file we'll be unit testing
+
+## naming conventions of the files
+- spec file extensions, common file extensions for unit test files:
+*.spec.js
+*.test.js
+- think of spec and test as synonymous
+- "spec is short for expectation"
+- for Jasmine, we'll be using [*.spec.js]
+- if we were testing TypeScript, a superscript of JavaScript, the test files would be [*.spec.ts]
+- spec file name is based on target file name (e.g. [calc.spec.js]); this keeps the files together in the file tree
+
+## create calc.spec.js
+
+## Suites
+- group of specs/tests
+- organizes our specs
+
+## create first suite
+- use global [describe] method
+- don't need to type jasmine.describe
+- don't need to important
+- globally available as [describe('');]
+- the [describe] method receives two parameters: 1. description/titlee of suite 2. anonymous function executed as part of suite
+[describe('This is shown in the reporters!', function() {
+
+});]
+- doesn't display description in spec-runner.html, because we need to include the specs as part of the spec-runner so it can discover the suites inside of them
+[   <script src="calc.spec.js"></script>]
+- now it displays the following result:
+[[RESULT]]
+Incomplete: No specs found, , randomized with seed 30385
+This is shown in the reporters!
+
+### place specs in function body
+- first, change title/description of suite to filename of target file (NAMING CONVENTION OF COURSE)
+- makes navigation easy when looking at the reporter
+- each suite defined is listed in the spec-runner report page
+
 
 # 16. Specs
 
