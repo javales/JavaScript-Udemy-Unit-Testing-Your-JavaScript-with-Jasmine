@@ -277,6 +277,50 @@ SPEC HAS NO EXPECTATIONS should subract numbers to total
 SPEC HAS NO EXPECTATIONS should multiply numbers to total
 
 # 17. Expectations
+- think of them as [assertions]
+- assertions - just statements, resulting in True or False
+- e.g. 5 + 5 = 10
+- [expect] 5 + 5 [to be] 10
+- result is True
+- format of expectation above
+- writing it in Jasmine:
+- chain the [expect] spec with a [toBe] [matcher]
+[
+    const calculator = new Calculator();
+    calculator.add(5);
+    expect(calculator.total).toBe(5);
+]
+
+[[RESULT]]
+4 specs, 1 failure, randomized with seed 00639
+Spec List | Failures
+calc.js > should add numbers to total
+ReferenceError: Calculator is not defined
+
+- reason: need to include the src in [spec-runner.html], adding calc.js BEFORE the spec
+
+## passing and failing specs (it)
+- Passing Spec = Spec with ALL TRUE Expectations
+- Failing Spec = Any ONE FAILED Expectation
+- Spec is body within in [it] method
+    it('should add numbers to total', function() {
+        const calculator = new Calculator();
+        calculator.add(5);
+        expect(calculator.total).toBe(5);
+        //expect(10).toBe(11);
+
+    });
+- now complete specs of other methods
+- create an instance of calculator for every expectation, since specs can run in any order, and want to isolate specs from each other
+    it('should subract numbers to total', function() {
+        const calculator = new Calculator();
+        calculator.total = 30;
+        calculator.subtract(5);
+
+        expect(calculator.total).toBe(25);
+    });
+- final one is to divide [10:30]
+ 
 
 # 18. Disabled specs and disabled suites
 
