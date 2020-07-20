@@ -1,0 +1,39 @@
+# 21. Section intro
+
+# 22. What is a matcher
+- Matcher - a function for boolean comparison between actual value and expected value
+- responsible for reporting to Jasmine if expectation is True vs False
+- search for toBe() method in jasmine.js to see how it works
+
+
+# 23. toBe
+
+# 24. toEqual
+
+# 25. toBeTruthy, toBeFalsy
+
+# 26. Negating matchers
+
+# 27. toBeDefined, toBeUndefined
+
+# 28. toBeNull
+
+# 29. toContain
+
+# 30. toBeNaN
+
+# 31. toThrow, toThrowError
+
+# 32. toMatch
+
+# 33. Other matchers
+
+# 34. Match anything
+
+# 35. Custom matchers
+
+# 36. Third party matchers
+
+# 37. Section summary
+
+# 38. Section notes
