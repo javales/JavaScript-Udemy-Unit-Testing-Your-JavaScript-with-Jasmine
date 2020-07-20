@@ -164,6 +164,45 @@ const numberA and numberB
 - the [auto 0] is an auto 0 left margin shorthand that allows the width percentage to work
 
 # 14. Setting up jasmine
+- download or use existing download of Jasmine
+- [SpecRunner.html] is a template for starting off with specs and source code
+- rename this to [spec-runner.html] to match the naming convention of our project files
+- [console.js] is the spec reporter not being used in this lecture
+- copy the following lib subfolder files to a lib subfolder in the project folder
+[
+boot.js
+jasmine.css
+jasmine-html.js
+jasmine.js
+]
+
+## customize spec-runner.html
+- change title to Simple Calculator
+- remove favicon link
+- update paths to lib path
+- remove src and spec file references
+- add <!--TODO: Include our own specs (over next few lectures) -->
+- open and confirm output:
+
+[[RESULT]]
+Incomplete: No specs found, , randomized with seed 39827
+
+## of the three files loaded by confirming the above output, [jasmine.js] is most important
+- has all the methods we'll be using (e.g. Spy) which are the pieces of the framework that make unit testing possible
+- version at very bottom
+
+## [jasmine-html.js] is just a reporter
+- [jasmineRequire.HtmlReporter] this reporter defines the format to show our specs of pass and fail and the details of the errors
+- looking at the [spec-runner.html], there is nothing in the body; yet, it displays all the found elements based on what is in [jasmine-html.js]
+- add elements to the page to create the report for the specs
+- can be changed to a different reporter, but this will do
+
+## [boot.js] starts all the configuration needed for the framework
+- "the glue of the framework"
+- starts everything we need to run Jasmine and to discover and run our specs
+
+## [jasmine.css] optionally used for styling of the report and spec runner
+
 
 # 15. Suites
 
