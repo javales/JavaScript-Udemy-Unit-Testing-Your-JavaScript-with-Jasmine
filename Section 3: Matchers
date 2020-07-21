@@ -11,7 +11,15 @@
 - === vs ==
 - === compares both value and type
 
+
 # 24. toEqual
+- uses "deep equality comparison" per above site
+- ensures objects have equal keys and values
+- compares any number of values
+- "objects are compared by reference"
+- also uses strict comparison ===
+- create expectation that it 'has constructor'
+
 
 # 25. toBeTruthy, toBeFalsy
 

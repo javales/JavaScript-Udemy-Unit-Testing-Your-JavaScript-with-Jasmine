@@ -36,4 +36,11 @@ describe('calc.js', function() {
 
         expect(calculator.total).toBe(0);
     });
+
+    it('has a constructor', function() {
+        const calculator = new Calculator();
+        const calculator2 = new Calculator();
+
+        expect(calculator).toEqual(calculator2);
+    });
 });
