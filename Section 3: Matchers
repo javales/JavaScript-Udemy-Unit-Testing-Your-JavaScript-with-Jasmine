@@ -18,10 +18,13 @@
 - compares any number of values
 - "objects are compared by reference"
 - also uses strict comparison ===
-- create expectation that it 'has constructor'
+- create expectation that it 'has constructor' DON'TGETTHIS
 
 
 # 25. toBeTruthy, toBeFalsy
+DON'TGETTHIS
+- change "has a constructor" to "can be instantiated"
+- 
 
 # 26. Negating matchers
 

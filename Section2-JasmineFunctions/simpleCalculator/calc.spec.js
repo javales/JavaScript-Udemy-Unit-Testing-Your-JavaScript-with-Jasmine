@@ -35,12 +35,15 @@ describe('calc.js', function() {
         const calculator = new Calculator();
 
         expect(calculator.total).toBe(0);
+        expect(calculator.total).toBeFalsy();
     });
 
-    it('has a constructor', function() {
+    it('can be instantiated', function() {
         const calculator = new Calculator();
         const calculator2 = new Calculator();
 
+        expect(calculator).toBeTruthy();
+        expect(calculator2).toBeTruthy();
         expect(calculator).toEqual(calculator2);
     });
 });
