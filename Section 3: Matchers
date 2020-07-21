@@ -7,6 +7,9 @@
 
 
 # 23. toBe
+- go to https://jasmine.github.io/api/3.5/global
+- === vs ==
+- === compares both value and type
 
 # 24. toEqual
 
