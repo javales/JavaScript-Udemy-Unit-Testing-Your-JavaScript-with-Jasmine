@@ -62,4 +62,11 @@ describe('calc.js', function() {
         expect(calculator.multiply).toBeDefined();     // or not.toBeUndefined();
         expect(calculator.divide).toBeDefined();   // or not.toBeUndefined();
     })
+
+    it('can overwrite total', function() {
+        const calculator = new Calculator();
+
+        calculator.total = null;
+        expect(calculator.total).toBeNull();
+    })
 });

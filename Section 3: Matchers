@@ -53,6 +53,18 @@ DON'TGETTHIS
 
 
 # 28. toBeNull
+- to declar an intentional absence of a value
+[
+    let test = null;
+]
+
+WHAT'STHEPOINTOFASSOCIATINGOVERWRITINGWITHSETTINGTONULL???
+
+[
+    calculator.total = null;
+    expect(calculator.total).toBeNull();
+]
+
 
 # 29. toContain
 
