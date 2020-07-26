@@ -45,6 +45,7 @@ describe('calc.js', function() {
         expect(calculator).toBeTruthy();
         expect(calculator2).toBeTruthy();
         expect(calculator).toEqual(calculator2);
+        expect(calculator.constructor.name /* Calculator */).toContain("Calculat");
     });
 
     it('instantiates unique object', function() {

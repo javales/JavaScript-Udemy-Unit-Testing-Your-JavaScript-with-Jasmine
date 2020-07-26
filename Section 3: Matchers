@@ -67,6 +67,10 @@ WHAT'STHEPOINTOFASSOCIATINGOVERWRITINGWITHSETTINGTONULL???
 
 
 # 29. toContain
+- can be used to find an item in an [array]
+- can be used against a [string] to find a [substring]
+- 
+
 
 # 30. toBeNaN
 
