@@ -90,6 +90,14 @@ calculus.constructor.name
 ]
 
 # 30. toBeNaN
+- global property/scope (NaN: NaN) that represents NaN
+- lives in [window] object --> [window.NaN]
+- a matcher exists because you cannot compare NaN to NaN, because [NaN == NaN and NaN === NaN] both evaluate to [false]
+- to evaluate a true NaN comparison: [Number.isNaN(NaN);]
+- since we don't require [number] to be a number in the [multiply] method, we expect the result of passing in a string to be NaN
+[
+    
+]
 [
     expect(thing).toBeNaN();
 ]
