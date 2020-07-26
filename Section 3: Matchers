@@ -69,8 +69,25 @@ WHAT'STHEPOINTOFASSOCIATINGOVERWRITINGWITHSETTINGTONULL???
 # 29. toContain
 - can be used to find an item in an [array]
 - can be used against a [string] to find a [substring]
-- 
+- above are two common cases for this matcher
+- type is an [object]
 
+## revisiting the Calculator constructor
+let calculus = new Calculator();
+undefined
+
+calculus.constructor
+ƒ Calculator () {
+    this.total = 0;
+}
+
+calculus.constructor.name
+"Calculator"
+
+## above shows how Calculator constructor has a string as the name value; so we can test for a substring of this in [canbeinstantiated] spec
+[
+    calculator.constructor.name /* Calculator */).toContain("Calcu");
+]
 
 # 30. toBeNaN
 
