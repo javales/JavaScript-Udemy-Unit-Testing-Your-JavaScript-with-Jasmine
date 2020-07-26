@@ -90,6 +90,9 @@ calculus.constructor.name
 ]
 
 # 30. toBeNaN
+[
+    expect(thing).toBeNaN();
+]
 
 # 31. toThrow, toThrowError
 
