@@ -24,11 +24,33 @@
 # 25. toBeTruthy, toBeFalsy
 DON'TGETTHIS
 - change "has a constructor" to "can be instantiated"
-- 
+
 
 # 26. Negating matchers
+- not. before the matcher
+
 
 # 27. toBeDefined, toBeUndefined
+- "undefined" variable has 3 properties
+1. global property
+2. primitive - data that is not an object, and has no methods
+3. automatically assigned to variables that have just been declared (AND not initialized?)
+
+## toBeUndefined() matcher
+[
+    expect(result).toBeDefined();
+
+    const calculator = new Calculator();
+
+    expect(calculator.add).toBeDefined();   // or not.toBeUndefined();
+    expect(calculator.subtract).not.toBeUndefined();    // or not.toBeUndefined();
+    expect(calculator.multiply).not.toBeUndefined();    // or not.toBeUndefined();
+    expect(calculator.divide).not.toBeUndefined();      // or not.toBeUndefined();
+
+]
+
+## toBeDefined() matcher instead of .not'ing the toBeUndefined() matcher
+
 
 # 28. toBeNull
 

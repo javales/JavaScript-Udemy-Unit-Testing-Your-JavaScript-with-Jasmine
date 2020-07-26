@@ -53,4 +53,13 @@ describe('calc.js', function() {
         
         expect(calculator1).not.toBe(calculator2);
     });
+
+    it('has common operations', function() {
+        const calculator = new Calculator();
+
+        expect(calculator.add).toBeDefined();     // or not.toBeUndefined();
+        expect(calculator.subtract).toBeDefined();     // or not.toBeUndefined();
+        expect(calculator.multiply).toBeDefined();     // or not.toBeUndefined();
+        expect(calculator.divide).toBeDefined();   // or not.toBeUndefined();
+    })
 });
