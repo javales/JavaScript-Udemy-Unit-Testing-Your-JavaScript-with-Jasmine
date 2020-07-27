@@ -136,8 +136,20 @@ calc.js:22 Uncaught Error: Cannot divide by zero     <----
 ## use toThrowError(expectedOpt, messageOpt) to unit test our custom error messageOpt
 
 
-
 # 32. toMatch
+- toMatch(expected)
+- [expect] the actual value to match a regular expression
+
+EXAMPLES:
+[expect("my string").toMatch(/string$/);]
+[expect("other string").toMatch("her");] a regular expression without any shorthand
+- go to https://regex101.com
+- build [-?\d+] to match either positive or negative integer form 50 or -50
+
+## add another spec for "returns total"
+- remember to wrap -?\d+ in / and /
+- can also check it using typeof to confirm 'number'
+
 
 # 33. Other matchers
 

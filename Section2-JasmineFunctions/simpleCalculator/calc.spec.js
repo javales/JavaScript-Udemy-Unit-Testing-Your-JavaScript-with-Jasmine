@@ -4,7 +4,6 @@ describe('calc.js', function() {
         calculator.add(5);
         expect(calculator.total).toBe(5);
         //expect(10).toBe(10);
-
     });
 
     it('should subract numbers from total', function() {
@@ -87,4 +86,14 @@ describe('calc.js', function() {
         expect(function() { calculator.divide(0) }).toThrowError(Error);
         expect(function() { calculator.divide(0) }).toThrowError(Error, 'Cannot divide by zero');
     });
+
+    it('returns total', function() {
+        const calculator = new Calculator();
+        calculator.total = 50;
+
+        expect(calculator.add(20)).toBe(70);
+        expect(calculator.total).toMatch(/-?\d+/);
+        expect(typeof calculator.total).toMatch('number');
+    });
+
 });
