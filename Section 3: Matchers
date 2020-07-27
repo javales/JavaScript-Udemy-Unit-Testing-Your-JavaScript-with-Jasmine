@@ -162,9 +162,17 @@ EXAMPLES:
 
 
 # 35. Custom matchers
+- creating our own custom matchers when existing don't cover what we need
+- Jasmine versions may break them
+- create [custom-matchers.js]
+- in spec, create placeholder in "can be instantiated" for // expect(calculator).toBeCalculator(); // where toBeCalculator is our custom matcher
+DON'TGETTHISATALL
 
 
 # 36. Third party matchers
+- in [custom-matchers.js], the first [property] we'll have is the [toBeCalculator] matcher
+- [actual] holds value of calculator
+
 
 # 37. Section summary
 
