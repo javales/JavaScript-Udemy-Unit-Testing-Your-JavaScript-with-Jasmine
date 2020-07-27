@@ -157,6 +157,9 @@ EXAMPLES:
 
 
 # 34. Match anything
+- asymmetric matchers - not equal on each side
+- [jasmine.anything] does NOT work for null or undefined
+
 
 # 35. Custom matchers
 

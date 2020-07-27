@@ -94,6 +94,8 @@ describe('calc.js', function() {
         expect(calculator.add(20)).toBe(70);
         expect(calculator.total).toMatch(/-?\d+/);
         expect(typeof calculator.total).toMatch('number');
+        expect(calculator.total).toEqual(jasmine.anything());
+        expect(function() {}).toEqual(jasmine.anything()); // expect when value is null or undefined
     });
 
 });
