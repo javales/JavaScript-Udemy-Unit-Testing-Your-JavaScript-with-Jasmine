@@ -96,13 +96,46 @@ calculus.constructor.name
 - to evaluate a true NaN comparison: [Number.isNaN(NaN);]
 - since we don't require [number] to be a number in the [multiply] method, we expect the result of passing in a string to be NaN
 [
-    
+
 ]
 [
     expect(thing).toBeNaN();
 ]
 
 # 31. toThrow, toThrowError
+- referring back to "divide" method:
+[
+    Calculator.prototype.divide = function(number) {
+    if (number === 0) {
+        throw new Error('Cannot divide by zero');
+    }
+    
+    return this.total = this.total /= number;
+
+}
+]
+- displays our custom error meessage of 'Cannot divide by zero'
+[
+const calculator = new Calculator();
+undefined
+calculator.total = 20;
+20
+calculator.divide(0);
+calc.js:22 Uncaught Error: Cannot divide by zero     <----
+    at Calculator.divide (calc.js:22)
+    at <anonymous>:1:12
+]
+
+## toThrow(expectedOpt)
+- "[expect] a function to [throw] something"
+- can either specify the value of what's thrown, or not specify and it will verify that something was thrown
+- Example:
+[expect(function() { return 'things'; }).toThrow('foo');]
+[expect(function() { return 'stuff'; }).toThrow();]
+
+## use toThrowError(expectedOpt, messageOpt) to unit test our custom error messageOpt
+
+
 
 # 32. toMatch
 
