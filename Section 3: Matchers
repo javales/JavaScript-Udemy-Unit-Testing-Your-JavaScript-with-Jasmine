@@ -169,11 +169,33 @@ EXAMPLES:
 DON'TGETTHISATALL
 
 
-# 36. Third party matchers
+# 36. Update on third party matchers! Read before the next lecture.
+Update on third party matchers! Read before the next lecture.
+👋 Hello!
+I am happy you have made it here! I hope you have enjoyed the course so far. If you have! follow me on twitter, tweet about it! tag me, let me know! @JuanLizarazoG - I love hearing your feedback.
+
+✅ Lecture update
+I open a file from a GitHub repository in the next lecture, but that file is no longer there. You can find it through releases and version 3.8 but to make things easier, I put it here for you:
+
+https://raw.githubusercontent.com/juanlizarazo/jasmine-casts/master/assets/jasmine-matchers.js
+
+Go to this link, open the file, right-click to save as and save it to a location where you can easily access it in the next video!
+
+
+# 37. Third party matchers
+- look at "returns total" spec
+- add [toBeNumber();] and see how error says [toBeNumber is not a function]
+- look up https://raw.githubusercontent.com/juanlizarazo/jasmine-casts/master/assets/jasmine-matchers.js
+- save it project's /lib folder
+- include it in spec-runner.html
+- required to put it AFTER [jasmine.js]
+- put it after [boot.js]
+
 - in [custom-matchers.js], the first [property] we'll have is the [toBeCalculator] matcher
 - [actual] holds value of calculator
 
 
-# 37. Section summary
+# 38. Section summary
 
-# 38. Section notes
+
+# 39. Section notes
