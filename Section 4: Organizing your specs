@@ -1,6 +1,11 @@
 # 40. Section intro
 
 # 41. Recommendations to organize our specs
+- use [describe] which is a method that groups specs into a [suite]
+- use naming convention of matching spec file name to the source file (JavaScript file) you are testing
+- maintain a folder structure
+- nest suites
+
 
 # 42. Nesting suites
 
