@@ -29,10 +29,17 @@
 - other specs belong to Calculator function constructor itself, not specific to a single method, so those are put on top before the first 3rd-level suite
 
 
-
-
-
 # 43. Setup and teardown
+describe() <-- suite
+    beforeAll() <-- before all specs as a group
+    beforeEach() <-- before each spec within groups
+    afterAll()
+    afterEach()
+
+    it()
+    it()
+    it()
+
 
 # 44. beforeEach, afterEach
 
