@@ -8,8 +8,29 @@
 
 
 # 42. Nesting suites
-- see Calculator as a class
-- 
+- we can't easily see what the specs are testing inside calc.js 
+- nesting suites helps with that
+
+## open calc.js 
+- We have a "function constructor" and our constructor is [Calculator]
+- can see Calculator as our class
+
+## open calc.spec.js
+- Add a describe that describes our function constructor/class [Calculator] as our first nested suite
+- start by adding all of our specs inside of this suite
+- the report now reflects the nested [Calculator] suite within the [calc.js] suite
+- reflects how the function constructor/class [Calculator] has 12 specs
+
+## now start another suite inside Calculator suite
+- third level to the report
+- describes [specs] for [methods] inside Calculator [function constructor]
+- create suites for each method, using () to indicate in the report that it's a function
+- move specs under each corresponding 3rd-level suite
+- other specs belong to Calculator function constructor itself, not specific to a single method, so those are put on top before the first 3rd-level suite
+
+
+
+
 
 # 43. Setup and teardown
 
