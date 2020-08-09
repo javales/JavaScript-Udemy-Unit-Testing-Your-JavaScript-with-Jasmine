@@ -42,6 +42,19 @@ describe() <-- suite
 
 
 # 44. beforeEach, afterEach
+- use a setup method Jasmine offers - beforeEach - for initializing our instance of the calculator 
+- executed before the specs run, so initialize after 2nd-level suite but before 3rd-level suite
+- anonymous function as first argument 
+- also make afterEach()
+- define a variable for the parent suite available to all suites underneath
+[
+    let calculator;
+    let calculator2;
+]
+- then initialize the calculator variables inside the beforeEach()
+- then remove all the individual initialization instances in the specs
+- for afterEach, nothing needed at the moment; examples might be clean-up for calculator
+ 
 
 # 45. beforeAll, afterAll
 
