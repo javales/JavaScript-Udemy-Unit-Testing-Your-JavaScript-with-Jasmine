@@ -2,7 +2,7 @@ describe('calc.js', function() {
     describe('Calculator', function() {
         let calculator;
         let calculator2;
-        
+
         beforeEach(function(){
             // anything here executes before each spec
             // each spec (it) inside this describe
@@ -12,6 +12,8 @@ describe('calc.js', function() {
         });
 
         afterEach(function(){
+            // anything here executes after each spec
+            // each spec (it) inside this describe
 
         });
 
