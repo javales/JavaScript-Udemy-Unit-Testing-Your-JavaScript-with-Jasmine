@@ -54,10 +54,40 @@ describe() <-- suite
 - then initialize the calculator variables inside the beforeEach()
 - then remove all the individual initialization instances in the specs
 - for afterEach, nothing needed at the moment; examples might be clean-up for calculator
- 
+
 
 # 45. beforeAll, afterAll
+- unit test the [calculate] and [updateResult] functions of [main.js]
+- create [main.spec.js]
+- describe the two suites to unit test the two methods
+- create placeholders for the specs we need to define for the suites
+- write a couple [it]'s for what we want to unit test inside these two methods
+- saving changes nothing since new spec file isn't included in spec-runner.html yet
+- remember to place the source files before the spec files in the [spec-runner.html]
+- now can see spec with no body in calculate() suite as pendind spec (based on yellow text)
+- now mark the spec as an [xit], and now shows it as temporarily disabled pending spec
+
+## get rid of 5 in DOM using lifecycle method
+- add an [afterAll()] at the beginning of the updateResult() suite
+- place in it the clean-up task for the 5 in the DOM
+- confirm the junk no longer remains after running our test
+
+## move the element dependency into a beforeAll()
+[
+    const element = document.createElement('div');
+            element.setAttribute('id', 'result');
+
+            document.body.appendChild(element);
+]
+- take above out of the 'adds result to DOM element' spec
+
+# need to share the state of [element] in beforeAll()
+- element is not defined, as shown by error
+- define a scope let element
+- remove the const definition from thee beforeAll()'s statement
+
 
 # 46. Jasmine and the [this] keyword
+
 
 # 47. Section summary
