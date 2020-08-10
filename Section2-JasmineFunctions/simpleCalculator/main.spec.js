@@ -10,27 +10,24 @@ describe('main.js', function() {
     });
 
     describe('updateResult()', function() {
-        let element;
-
         beforeAll(function() {
             // Executed just once before all specs are executed
-            element = document.createElement('div');
+            const element = document.createElement('div');
             element.setAttribute('id', 'result');
 
             document.body.appendChild(element);
+
+            this.element = element;
         });
-        
         
         afterAll(function() {
             // Executed just once after all specs are executed
-            const element = document.getElementById('result');
-
-            document.body.removeChild(element);
+            document.body.removeChild(this.element);
         });
         it('adds result to DOM element', function() {
             updateResult('5');
 
-            expect(element.innerText).toBe('5');
+            expect(this.element.innerText).toBe('5');
         });
     });
 

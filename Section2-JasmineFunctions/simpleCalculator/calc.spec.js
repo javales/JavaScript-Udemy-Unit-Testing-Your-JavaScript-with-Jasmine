@@ -8,7 +8,6 @@ describe('calc.js', function() {
             // each spec (it) inside this describe
             calculator = new Calculator();
             calculator2 = new Calculator();
-
         });
 
         afterEach(function(){

@@ -88,6 +88,20 @@ describe() <-- suite
 
 
 # 46. Jasmine and the [this] keyword
+- jasmine allows us to make a variable available to the three blocks without defining a variable
+- remove the let definition and put the const definition back
+- use [this.element = element;] which allows references to state that Jasmine will keep and make available to our different blocks
+- refreshing shows element is not defined
 
+## fix by adding this. to each element reference
+- for afterAll(), can remove element definition altogether
+
+## can update suites to share state between blocks
+- but leaving calc.spec.js as is with beforeEach as is to leave examples in place for all strategies
+
+## important point about using [this] to share state
+- relates to function keyword
+- if change anonymous function to arrow function in suite updateResult(), 
+- DIDNOTUNDERSTANDPOINTSMADEABOUTARROWFUNCTIONS
 
 # 47. Section summary
