@@ -1,4 +1,9 @@
 # 49. Section intro
+- Jasmine spies are important for isolating dependencies
+- Spy matchers
+- Configuring spies to isolate depencies
+- Spying on properties known as getters and setters
+- Cannot spy on properties other than getters and setters
 
 # 50. Jasmine spies
 
