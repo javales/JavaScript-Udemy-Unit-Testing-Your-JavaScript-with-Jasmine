@@ -6,6 +6,32 @@
 - Cannot spy on properties other than getters and setters
 
 # 50. Jasmine spies
+- [main.js] has a function called calculate()
+- has dependencies in calling external methods (like Calculator->add() and Calculator->multiply())
+- failures of these dependencies can cause failures on calculate()
+- need to fix this by isolating these dependencies
+- main.js' updateResult() is also a dependency
+
+## spies - create test doubles and help us isolate dependencies for true unit testing
+
+### Test Double
+- object that can stand in for a real object in a test
+- like a movie actor stunt double
+- replace dependencies in our suite
+- makes failures easier to identify/isolate
+- test double functions are called [spies]
+- in other frameworks, they are called [test doubles]
+- a [spy] can create a test double for any function
+- a spy only exists in the [describe] or [it] block in which it is define and is removed after each [spec]
+- spy is not shared between different [describes] or [specs]
+- behavior can be shared with spies using setup and teardown methods
+
+### Special Matchers for Spies
+- 3 Main Matchers:
+toHaveBeenCalled
+toHaveBeenCalledWith
+toHaveBeenCalledTimes
+
 
 # 51. Spying on functions
 
