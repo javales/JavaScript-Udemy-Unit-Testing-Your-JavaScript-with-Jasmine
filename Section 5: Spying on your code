@@ -34,6 +34,17 @@ toHaveBeenCalledTimes
 
 
 # 51. Spying on functions
+- writing spec bodies for xit'd specs in [main.spec.js]
+- because [main.js]'s updateResult method is a global method, it lives in the window object
+- therefore, use the [spyOn()] function which receives two parameters
+1. object that contains the method you want to spy upon - in this case, our window object
+2. string which is the name of the method
+- we've just created a spy on this method where when this is executed just for this spec, updateResult, the real method is not called
+- can optionally be explicit about that and call the [and.stub();] method which tells Jasmine to create a spy, inject it on updateResult, replace the updateResult implementation, and do not do/return/call anything, just track the calls on it, spy on the method and internal calls but don't do anything else
+- have created our first spy and first dependency we're isolating, because even if updateResult were not working, this spec is going to continue and it will be valid
+
+## how do we know updateResult was called and if an expression was not recognized
+- have to use special spy matchers
 
 # 52. toHaveBeenCalled
 

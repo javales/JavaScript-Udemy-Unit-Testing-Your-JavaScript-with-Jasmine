@@ -1,6 +1,10 @@
 describe('main.js', function() {
     describe('calculate()', function() {
-        xit('validates expression');
+        it('validates expression', function(){
+            spyOn(window, 'updateResult').and.stub();
+
+            calculate('a+3');
+        });
         xit('calls add');
         xit('calls subtract');
         xit('calls multiply');
