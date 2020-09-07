@@ -46,7 +46,18 @@ toHaveBeenCalledTimes
 ## how do we know updateResult was called and if an expression was not recognized
 - have to use special spy matchers
 
+
 # 52. toHaveBeenCalled
+- evaluating if spy has been called
+- use [toHaveBeenCalled] matcher
+- first create typical [spec] method (expect())
+- first thing passed to expect method is our spy -- (window.updateResult) -- since that was where the spy was installed
+- then change our matcher -- toHaveBeenCalled();
+- this evaluates to this spy has been called at least once when calculate is executed
+- now see it in action without calling the calculate method -- by no longer using [calculate('a+3')] -- which we expect to fail
+- next call it by execute the calculate method -- by uncommenting the above
+- 
+
 
 # 53. toHaveBeenCalledWith
 

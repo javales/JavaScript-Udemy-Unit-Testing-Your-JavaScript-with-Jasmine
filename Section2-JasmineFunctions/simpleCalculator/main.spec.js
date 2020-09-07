@@ -1,9 +1,25 @@
 describe('main.js', function() {
     describe('calculate()', function() {
-        it('validates expression', function(){
+        it('validates expression when the FIRST number is invalid', function(){
             spyOn(window, 'updateResult').and.stub();
 
             calculate('a+3');
+
+            expect(window.updateResult).toHaveBeenCalled();
+        });
+        it('validates expression when the SECOND number is invalid', function(){
+            spyOn(window, 'updateResult').and.stub();
+
+            calculate('a+3');
+
+            expect(window.updateResult).toHaveBeenCalled();
+        });
+        it('validates expression when operation is invalid', function(){
+            spyOn(window, 'updateResult').and.stub();
+
+            calculate('2_3');
+
+            expect(window.updateResult).toHaveBeenCalled();
         });
         xit('calls add');
         xit('calls subtract');
