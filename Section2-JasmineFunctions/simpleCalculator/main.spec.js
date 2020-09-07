@@ -6,20 +6,25 @@ describe('main.js', function() {
             calculate('a+3');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('Expression not recognized');
+
         });
         it('validates expression when the SECOND number is invalid', function(){
-            spyOn(window, 'updateResult').and.stub();
-
+            spyOn(window, 'updateResult'); // and.stub() is the default, can be omitted 
             calculate('a+3');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalled();
+
         });
         it('validates expression when operation is invalid', function(){
-            spyOn(window, 'updateResult').and.stub();
+            spyOn(window, 'updateResult');  // and.stub() is the default, can be omitted 
 
             calculate('2_3');
 
             expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalled();
+
         });
         xit('calls add');
         xit('calls subtract');

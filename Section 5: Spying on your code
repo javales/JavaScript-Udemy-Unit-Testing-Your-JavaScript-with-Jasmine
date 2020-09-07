@@ -56,10 +56,30 @@ toHaveBeenCalledTimes
 - this evaluates to this spy has been called at least once when calculate is executed
 - now see it in action without calling the calculate method -- by no longer using [calculate('a+3')] -- which we expect to fail
 - next call it by execute the calculate method -- by uncommenting the above
-- 
+
+## repeat for the two other conditions where 'Expression not recognized'
+- for better coverage
+- first, update title to 'validate expression when the FIRST number is invalid'
+- then, SECOND
+- then, '...when operation is invalid' like when using valid numbers BUT an INVALID operator
+- spy has now been called for each of these
 
 
 # 53. toHaveBeenCalledWith
+- because toHaveBeenCalled matcher is not specific enough to determine if that call was "this" (updateResult('Expression not recognized');), need to find help with another matcher
+- but first, remove [.and.stub()] for second and third spec for [calculate] method
+- this is because .and.stub() is the default for [spyOn]
+- forces it to not do nor return anything
+- but if you omit, it behaves exactly the same
+- add a comment to make a note of this
+
+## use second expectation to assert that is has been called with the string 'Expression not recognized'
+- use the same spec and pass the spy as the parameter (window.updateResult) the object and the method then the matcher is toHaveBeenCalledWith
+- toHaveBeenCalledWith() matcher receives a parameter
+- parameter is argument expected to be received by the real method (in this case 'Expression not recognized.') -- add a dot just to see this fail
+- then remove . and confirm good
+- include same in second and third spec
+
 
 # 54. toHaveBeenCalledTimes
 
