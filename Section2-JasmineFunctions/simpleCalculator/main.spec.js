@@ -7,6 +7,7 @@ describe('main.js', function() {
 
             expect(window.updateResult).toHaveBeenCalled();
             expect(window.updateResult).toHaveBeenCalledWith('Expression not recognized');
+            expect(window.updateResult).toHaveBeenCalledTimes(1);
 
         });
         it('validates expression when the SECOND number is invalid', function(){
