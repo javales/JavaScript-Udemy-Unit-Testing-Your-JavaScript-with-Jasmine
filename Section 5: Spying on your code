@@ -82,6 +82,13 @@ toHaveBeenCalledTimes
 
 
 # 54. toHaveBeenCalledTimes
+- third spy matcher - toHaveBeenCalledTimes
+- in [main.js], updateResult was called just ONCE
+- the two matchers we already used don't specify how many times the spy has been called
+- sometimes you have to make sure certain calls occur just a number of times (for loop, for example)
+- since we're calling it just once, we will use toHaveBeenCalledTimes
+- parameter is number of times something is called
+
 
 # 55. Spying on prototypes
 
