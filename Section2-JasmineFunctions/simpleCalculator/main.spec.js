@@ -67,8 +67,15 @@ describe('main.js', function() {
 
         });
 
-        xit('validates operation');
-        xit('calls updateResult');
+        it('calls updateResult (example using and.callThrough)', function(){
+            spyOn(window, 'updateResult');
+            spyOn(Calculator.prototype, 'multiply').and.callThrough();
+
+            calculate('5*5');
+
+            expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith(25);
+        });
     });
 
     describe('updateResult()', function() {

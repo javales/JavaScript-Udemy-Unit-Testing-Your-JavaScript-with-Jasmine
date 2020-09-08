@@ -125,6 +125,16 @@ toHaveBeenCalledTimes
 
 
 # 56. callThrough
+- because default has been removed from the main.js switch case, can delete the spec: [xit('validates operation');]
+- that's because the operation is already validated
+
+## looking at the final call: [updateResult(result);]
+- sometimes when calling a spy, you want to execute the REAL implementatioon
+- in true unit testing, you never call the real function
+- but sometimes, you need to "callThrough" 
+- so, add a spy on multiply BUT call the REAL implementation
+DIDNOTGETTHEPOINTOFTHISATALL
+
 
 # 57. callFake
 
