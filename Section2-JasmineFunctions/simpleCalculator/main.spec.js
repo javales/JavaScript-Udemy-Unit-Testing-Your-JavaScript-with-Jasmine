@@ -88,6 +88,16 @@ describe('main.js', function() {
             expect(window.updateResult).toHaveBeenCalled();
             expect(window.updateResult).toHaveBeenCalledWith('it works');
         });
+
+        it('calls updateResult (example using and.returnValue)', function(){
+            spyOn(window, 'updateResult');
+            spyOn(Calculator.prototype, 'multiply').and.returnValue('whatever [multiply] returns');    
+
+            calculate('5*5');
+
+            expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('whatever [multiply] returns');
+        });
     });
 
     describe('updateResult()', function() {
