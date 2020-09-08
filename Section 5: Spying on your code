@@ -150,8 +150,26 @@ DIDNOTGETTHEPOINTOFTHISATALL
 
 
 # 58. returnValue
+- usually, instead of calling callFake and calling a custom implementation that returns a special value, we can just use another function that Jasmine offers to configure our spies
+- hence, returnValue
+
+## copy callFake spec as a base
+- 
+
 
 # 59. returnValues
+- sometimes need spy to return multiple values
+- for example, maybe return value changes depending on number of calls performed
+
+## recycle returnValue block
+- then update title
+- use it with add
+- function receives unlimited number of values
+- first arguement is the first call performed on method
+- in this case, the first call is not doing anything with the return value, so we're going to make it [null]
+- then, 'whatever [add] returns' as the second argument to correspond to the second call of [result = calculator.add(numberB);]
+- 
+
 
 # 60. Spy and throwError
 
