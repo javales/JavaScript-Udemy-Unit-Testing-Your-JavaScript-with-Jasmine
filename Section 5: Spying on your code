@@ -91,6 +91,38 @@ toHaveBeenCalledTimes
 
 
 # 55. Spying on prototypes
+- so far spied on concrete instances like window and methods on those concrete instances
+- but we don't have access to main.js's [const calculator = new Calculator();
+]
+
+## [it('calls add', function() {})]
+- start by defining our spy
+- spy on 'add'
+- pass an expression that will trigger calculate
+- then add expectations
+- "calculator is not defined"
+- change to [spyOn(Calculator.prototype, 'add');]
+- "SPEC HAS NO EXPECTATIONS calls add"
+- note there are TWO calls to [add] in main.js
+- so [expect(Calculator.prototype.add).toHaveBeenCalledTimes(2);]
+- ANOTHER way to define the expectation:
+- define a [spy] variable and don't have to called the prototype.add method anymore
+- now let's add more expectations:
+- toHaveBeenCalledWith the first number numberA in [calculator.add(numberA);
+]
+- so looking at [calculate('3+4');] just about this expectation, we can expect this number to be 3
+- the order for toHaveBeenCalledWith doesn't matter, so the next line would be:
+- set it 5 to see failed expectation
+- set to 4 to match the actual expected integer
+
+## moving on to next three specs defined but not implemented (subtract, multiply, and divide)
+- start the bodies the same way as 'add'
+- for multiply, include a not.toHaveBeenCalledWith(3)
+
+## next implement [divide] spec
+- all include a .not. like above
+- drop the ... didn't have a default switch case in my code to match the lecture where he deleted it because the condition would never apply
+
 
 # 56. callThrough
 

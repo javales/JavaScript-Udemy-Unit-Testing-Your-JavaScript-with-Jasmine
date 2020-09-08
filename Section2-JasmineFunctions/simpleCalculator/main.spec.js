@@ -27,10 +27,46 @@ describe('main.js', function() {
             expect(window.updateResult).toHaveBeenCalled();
 
         });
-        xit('calls add');
-        xit('calls subtract');
-        xit('calls multiply');
-        xit('calls divide');
+        it('calls add', function() {
+            const spy = spyOn(Calculator.prototype, 'add');
+
+            calculate('3+4');
+
+            expect(spy).toHaveBeenCalledTimes(2);
+            expect(spy).toHaveBeenCalledWith(3); //the first number
+            expect(spy).toHaveBeenCalledWith(4);
+        });
+
+        it('calls subtract', function() {
+            const spy = spyOn(Calculator.prototype, 'subtract');
+
+            calculate('3-7');
+
+            expect(spy).toHaveBeenCalled();
+            expect(spy).toHaveBeenCalledWith(7); //the second number
+        });
+
+        it('calls multiply', function() {
+            const spy = spyOn(Calculator.prototype, 'multiply');
+
+            calculate('3*8');
+
+            expect(spy).toHaveBeenCalled();
+            expect(spy).not.toHaveBeenCalledWith(3); //the first number
+            expect(spy).toHaveBeenCalledWith(8); //the second number
+        });
+
+        it('calls divide', function() {
+            const spy = spyOn(Calculator.prototype, 'divide');
+
+            calculate('3/2');
+
+            expect(spy).toHaveBeenCalled();
+            expect(spy).not.toHaveBeenCalledWith(3); //the first number
+            expect(spy).toHaveBeenCalledWith(2);
+
+        });
+
         xit('validates operation');
         xit('calls updateResult');
     });
