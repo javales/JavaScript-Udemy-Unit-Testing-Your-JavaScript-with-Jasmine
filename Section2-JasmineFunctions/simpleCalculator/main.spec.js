@@ -76,6 +76,18 @@ describe('main.js', function() {
             expect(window.updateResult).toHaveBeenCalled();
             expect(window.updateResult).toHaveBeenCalledWith(25);
         });
+
+        it('calls updateResult (example using and.callFake)', function(){
+            spyOn(window, 'updateResult');
+            spyOn(Calculator.prototype, 'multiply').and.callFake(function(number) {
+                return 'it works';
+            });
+
+            calculate('5*5');
+
+            expect(window.updateResult).toHaveBeenCalled();
+            expect(window.updateResult).toHaveBeenCalledWith('it works');
+        });
     });
 
     describe('updateResult()', function() {

@@ -137,6 +137,17 @@ DIDNOTGETTHEPOINTOFTHISATALL
 
 
 # 57. callFake
+- sometimes, instead of calling the real implementation of a function, you want to spy on it but we want to call on a custom specific implementation inside of a test
+- hence, callFake
+
+## copy spec for callThrough as base
+- allows us to call a specific, custom implementation when we're spying on a function
+- first thing it receives is a function
+- ideally this function has same signature of the method you are trying to callFake
+- in this case, we have a [number] parameter, so we'll use that same name for the parameter (name doesn't actually matter)
+DIDNOTGETTHEPOINTOFTHISATALL
+- in unit tests, you usually don't need to use callFake
+
 
 # 58. returnValue
 
